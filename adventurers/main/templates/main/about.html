@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+    test
+{% endblock %}
+
+{% block content %}
+<h1>История</h1>
+    {% if story %}
+        {% for el in story %}
+            <p>
+              <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#story{{ el.pk }}" aria-expanded="false" aria-controls="story{{ el.pk }}">
+                {{ el.date }}
+              </button>
+            </p>
+            <div class="collapse" id="story{{ el.pk }}">
+              <div class="card card-body">
+                {{ el.Story_text }}
+              </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>У нас нет записей!</p>
+    {% endif %}
+{% endblock %}

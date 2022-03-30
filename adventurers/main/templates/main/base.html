@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-md navbar-light bg-secondary sticky-top ">
+
+  <a href="{% url 'home' %}" class="navbar-brad"><img src="../../img/logoD20.png" alt="D20" width="30" height="24"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTest" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <div class="collapse navbar-collapse" id="navbarTest">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-info" href="{% url 'home' %}">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class=" nav-link text-info" href="{% url 'create' %}">Новое событие</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-info" href="#">Контакты</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-info" href="{% url 'tvorchestvo' %}">Творчество</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-info" href="{% url 'book' %}">Книга мёртвых</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-info" href="{% url 'story' %}">История Саги</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-info" href="#">3D печать</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+</header>
+    <div class="container">
+    {% block content %}{% endblock %}
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+    </div>
+    <div class="col-6 col-md">
+      <h5>Мастера подземелий</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="https://vk.com/id9056275">Павел Полпур</a></li>
+        <li><a class="link-secondary" href="https://vk.com/gellathefox">Оля "Лиса"</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Администратор сайта</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="https://vk.com/shadowy100">Владимир Родионов</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Группа в ВК</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="https://vk.com/dicetheatre">Театр Кубов</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
